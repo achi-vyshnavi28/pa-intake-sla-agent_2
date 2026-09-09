@@ -1,0 +1,321 @@
+[
+  {
+    "provider_id": "PRV-001",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.046875,
+    "step2_pandas_overall_breach_rate": 0.046875,
+    "step3_root_cause": {
+      "label": "no_material_pattern",
+      "detail": "Breach rate is within the expected clean-operations range for the quarter.",
+      "flagged_weeks": [],
+      "trend_slope": 0.0034608248893963182,
+      "trend_r2": 0.05227123100480491,
+      "median_breach_rate": 0.0
+    },
+    "step4_cross_check": {
+      "metric": "PRV-001_overall_breach_rate",
+      "sql_value": 0.046875,
+      "pandas_value": 0.046875,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=128, cross-check agrees, evidence complete",
+      "sample_size": 128
+    },
+    "step6_llm_draft": "Provider Ridgeline Orthopedic Associates (PRV-001) shows an elevated SLA breach rate of 4.7% across 128 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "4.7%",
+        "128"
+      ]
+    },
+    "step7_final_note": "Provider Ridgeline Orthopedic Associates (PRV-001) shows an elevated SLA breach rate of 4.7% across 128 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "decision": "cleared"
+  },
+  {
+    "provider_id": "PRV-002",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.08196721311475409,
+    "step2_pandas_overall_breach_rate": 0.08196721311475409,
+    "step3_root_cause": {
+      "label": "review_queue_capacity_incident",
+      "detail": "Week 6: breach rate 36% coincides with a 52% breach rate among other providers on the same queue that week -- consistent with a documented queue-capacity incident, not a provider-side problem. Excluding that week, this provider's typical breach rate is 0%.",
+      "flagged_weeks": [
+        {
+          "week_idx": 6,
+          "provider_breach_rate": 0.364,
+          "other_providers_breach_rate": 0.522
+        }
+      ],
+      "trend_slope": -0.0008991008991008983,
+      "trend_r2": 0.0010022559542652854,
+      "median_breach_rate": 0.0
+    },
+    "step4_cross_check": {
+      "metric": "PRV-002_overall_breach_rate",
+      "sql_value": 0.08196721311475409,
+      "pandas_value": 0.08196721311475409,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=122, cross-check agrees, evidence complete",
+      "sample_size": 122
+    },
+    "step6_llm_draft": "Provider Amaranth Diagnostic Imaging Center (PRV-002) shows an elevated SLA breach rate of 8.2% across 122 reviewed PA requests this quarter (confidence: HIGH). Root cause: review queue capacity incident. Week 6: breach rate 36% coincides with a 52% breach rate among other providers on the same queue that week -- consistent with a documented queue-capacity incident, not a provider-side problem. Excluding that week, this provider's typical breach rate is 0%.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "8.2%",
+        "122",
+        "6",
+        "36%",
+        "52%",
+        "0%"
+      ]
+    },
+    "step7_final_note": "Provider Amaranth Diagnostic Imaging Center (PRV-002) shows an elevated SLA breach rate of 8.2% across 122 reviewed PA requests this quarter (confidence: HIGH). Root cause: review queue capacity incident. Week 6: breach rate 36% coincides with a 52% breach rate among other providers on the same queue that week -- consistent with a documented queue-capacity incident, not a provider-side problem. Excluding that week, this provider's typical breach rate is 0%.",
+    "decision": "escalate"
+  },
+  {
+    "provider_id": "PRV-003",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.04477611940298507,
+    "step2_pandas_overall_breach_rate": 0.04477611940298507,
+    "step3_root_cause": {
+      "label": "no_material_pattern",
+      "detail": "Breach rate is within the expected clean-operations range for the quarter.",
+      "flagged_weeks": [],
+      "trend_slope": -0.0030636030636030636,
+      "trend_r2": 0.029245289945678876,
+      "median_breach_rate": 0.0
+    },
+    "step4_cross_check": {
+      "metric": "PRV-003_overall_breach_rate",
+      "sql_value": 0.04477611940298507,
+      "pandas_value": 0.04477611940298507,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=134, cross-check agrees, evidence complete",
+      "sample_size": 134
+    },
+    "step6_llm_draft": "Provider Harborview Behavioral Health Group (PRV-003) shows an elevated SLA breach rate of 4.5% across 134 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "4.5%",
+        "134"
+      ]
+    },
+    "step7_final_note": "Provider Harborview Behavioral Health Group (PRV-003) shows an elevated SLA breach rate of 4.5% across 134 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "decision": "cleared"
+  },
+  {
+    "provider_id": "PRV-004",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.08391608391608392,
+    "step2_pandas_overall_breach_rate": 0.08391608391608392,
+    "step3_root_cause": {
+      "label": "no_material_pattern",
+      "detail": "Breach rate is within the expected clean-operations range for the quarter.",
+      "flagged_weeks": [],
+      "trend_slope": 0.00031378877532723694,
+      "trend_r2": 5.8148701317484175e-05,
+      "median_breach_rate": 0.0
+    },
+    "step4_cross_check": {
+      "metric": "PRV-004_overall_breach_rate",
+      "sql_value": 0.08391608391608392,
+      "pandas_value": 0.08391608391608392,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=143, cross-check agrees, evidence complete",
+      "sample_size": 143
+    },
+    "step6_llm_draft": "Provider Meridian Durable Medical Equipment (PRV-004) shows an elevated SLA breach rate of 8.4% across 143 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "8.4%",
+        "143"
+      ]
+    },
+    "step7_final_note": "Provider Meridian Durable Medical Equipment (PRV-004) shows an elevated SLA breach rate of 8.4% across 143 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "decision": "cleared"
+  },
+  {
+    "provider_id": "PRV-005",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.0847457627118644,
+    "step2_pandas_overall_breach_rate": 0.0847457627118644,
+    "step3_root_cause": {
+      "label": "no_material_pattern",
+      "detail": "Breach rate is within the expected clean-operations range for the quarter.",
+      "flagged_weeks": [],
+      "trend_slope": 0.006743256743256743,
+      "trend_r2": 0.10139614815181142,
+      "median_breach_rate": 0.08333333333333333
+    },
+    "step4_cross_check": {
+      "metric": "PRV-005_overall_breach_rate",
+      "sql_value": 0.0847457627118644,
+      "pandas_value": 0.0847457627118644,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=118, cross-check agrees, evidence complete",
+      "sample_size": 118
+    },
+    "step6_llm_draft": "Provider Crestwood Surgical Partners (PRV-005) shows an elevated SLA breach rate of 8.5% across 118 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "8.5%",
+        "118"
+      ]
+    },
+    "step7_final_note": "Provider Crestwood Surgical Partners (PRV-005) shows an elevated SLA breach rate of 8.5% across 118 reviewed PA requests this quarter (confidence: HIGH). Root cause: no material pattern. Breach rate is within the expected clean-operations range for the quarter.",
+    "decision": "cleared"
+  },
+  {
+    "provider_id": "PRV-006",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.48854961832061067,
+    "step2_pandas_overall_breach_rate": 0.48854961832061067,
+    "step3_root_cause": {
+      "label": "provider_side_chronic",
+      "detail": "Median weekly breach rate of 46% is persistently elevated across the quarter, not concentrated in any single incident week -- a provider-side pattern.",
+      "flagged_weeks": [],
+      "trend_slope": 0.021851317180987515,
+      "trend_r2": 0.14105771170809722,
+      "median_breach_rate": 0.46153846153846156
+    },
+    "step4_cross_check": {
+      "metric": "PRV-006_overall_breach_rate",
+      "sql_value": 0.48854961832061067,
+      "pandas_value": 0.48854961832061067,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=131, cross-check agrees, evidence complete",
+      "sample_size": 131
+    },
+    "step6_llm_draft": "Provider Amaranth Specialty Pharmacy Network (PRV-006) shows an elevated SLA breach rate of 48.9% across 131 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side chronic. Median weekly breach rate of 46% is persistently elevated across the quarter, not concentrated in any single incident week -- a provider-side pattern.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "48.9%",
+        "131",
+        "46%"
+      ]
+    },
+    "step7_final_note": "Provider Amaranth Specialty Pharmacy Network (PRV-006) shows an elevated SLA breach rate of 48.9% across 131 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side chronic. Median weekly breach rate of 46% is persistently elevated across the quarter, not concentrated in any single incident week -- a provider-side pattern.",
+    "decision": "escalate"
+  },
+  {
+    "provider_id": "PRV-007",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.33884297520661155,
+    "step2_pandas_overall_breach_rate": 0.33884297520661155,
+    "step3_root_cause": {
+      "label": "provider_side_trend_improving",
+      "detail": "Breach rate is improving over the quarter (OLS slope -0.053/week, R\u00b2=0.68) -- a provider-side pattern, not a one-week anomaly.",
+      "flagged_weeks": [],
+      "trend_slope": -0.05318491032776747,
+      "trend_r2": 0.6815897705033559,
+      "median_breach_rate": 0.2
+    },
+    "step4_cross_check": {
+      "metric": "PRV-007_overall_breach_rate",
+      "sql_value": 0.33884297520661155,
+      "pandas_value": 0.33884297520661155,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=121, cross-check agrees, evidence complete",
+      "sample_size": 121
+    },
+    "step6_llm_draft": "Provider Lakeside Cardiology Associates (PRV-007) shows an elevated SLA breach rate of 33.9% across 121 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side trend improving. Breach rate is improving over the quarter (OLS slope -0.053/week, R\u00b2=0.68) -- a provider-side pattern, not a one-week anomaly.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "33.9%",
+        "121",
+        "-0.053",
+        "0.68"
+      ]
+    },
+    "step7_final_note": "Provider Lakeside Cardiology Associates (PRV-007) shows an elevated SLA breach rate of 33.9% across 121 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side trend improving. Breach rate is improving over the quarter (OLS slope -0.053/week, R\u00b2=0.68) -- a provider-side pattern, not a one-week anomaly.",
+    "decision": "escalate"
+  },
+  {
+    "provider_id": "PRV-008",
+    "step1_sql_query": "pull_weekly_provider_breach_sql (RANK/LAG/moving-avg window functions)",
+    "step1_sql_overall_breach_rate": 0.3509933774834437,
+    "step2_pandas_overall_breach_rate": 0.3509933774834437,
+    "step3_root_cause": {
+      "label": "provider_side_trend_degrading",
+      "detail": "Breach rate is degrading over the quarter (OLS slope +0.059/week, R\u00b2=0.84) -- a provider-side pattern, not a one-week anomaly. Note: week 6 also coincided with a queue-wide breach spike (43% among other providers on the same queue) -- a contributing factor, but the quarter-long trend is present independent of that week.",
+      "flagged_weeks": [
+        {
+          "week_idx": 6,
+          "provider_breach_rate": 0.538,
+          "other_providers_breach_rate": 0.429
+        }
+      ],
+      "trend_slope": 0.058918858918858924,
+      "trend_r2": 0.8402489838912123,
+      "median_breach_rate": 0.36363636363636365
+    },
+    "step4_cross_check": {
+      "metric": "PRV-008_overall_breach_rate",
+      "sql_value": 0.3509933774834437,
+      "pandas_value": 0.3509933774834437,
+      "agrees": true,
+      "delta": 0.0
+    },
+    "step5_confidence": {
+      "level": "HIGH",
+      "rationale": "sample_size=151, cross-check agrees, evidence complete",
+      "sample_size": 151
+    },
+    "step6_llm_draft": "Provider Sable Diagnostics & Labs (PRV-008) shows an elevated SLA breach rate of 35.1% across 151 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side trend degrading. Breach rate is degrading over the quarter (OLS slope +0.059/week, R\u00b2=0.84) -- a provider-side pattern, not a one-week anomaly. Note: week 6 also coincided with a queue-wide breach spike (43% among other providers on the same queue) -- a contributing factor, but the quarter-long trend is present independent of that week.",
+    "step7_verification": {
+      "verified": true,
+      "unverified_numbers": [],
+      "checked_numbers": [
+        "35.1%",
+        "151",
+        "0.059",
+        "0.84",
+        "6",
+        "43%"
+      ]
+    },
+    "step7_final_note": "Provider Sable Diagnostics & Labs (PRV-008) shows an elevated SLA breach rate of 35.1% across 151 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side trend degrading. Breach rate is degrading over the quarter (OLS slope +0.059/week, R\u00b2=0.84) -- a provider-side pattern, not a one-week anomaly. Note: week 6 also coincided with a queue-wide breach spike (43% among other providers on the same queue) -- a contributing factor, but the quarter-long trend is present independent of that week.",
+    "decision": "escalate"
+  }
+]

@@ -1,0 +1,82 @@
+[
+  {
+    "provider_id": "PRV-002",
+    "provider_name": "Amaranth Diagnostic Imaging Center",
+    "specialty": "Imaging",
+    "overall_breach_rate": 0.082,
+    "n_requests": 122,
+    "n_breached": 10,
+    "confidence": "HIGH",
+    "confidence_rationale": "sample_size=122, cross-check agrees, evidence complete",
+    "root_cause": "review_queue_capacity_incident",
+    "root_cause_detail": "Week 6: breach rate 36% coincides with a 52% breach rate among other providers on the same queue that week -- consistent with a documented queue-capacity incident, not a provider-side problem. Excluding that week, this provider's typical breach rate is 0%.",
+    "flagged_weeks": [
+      {
+        "week_idx": 6,
+        "provider_breach_rate": 0.364,
+        "other_providers_breach_rate": 0.522
+      }
+    ],
+    "trend_slope": -0.0008991008991008983,
+    "trend_r2": 0.0010022559542652854,
+    "note": "Provider Amaranth Diagnostic Imaging Center (PRV-002) shows an elevated SLA breach rate of 8.2% across 122 reviewed PA requests this quarter (confidence: HIGH). Root cause: review queue capacity incident. Week 6: breach rate 36% coincides with a 52% breach rate among other providers on the same queue that week -- consistent with a documented queue-capacity incident, not a provider-side problem. Excluding that week, this provider's typical breach rate is 0%.",
+    "note_llm_verified": true
+  },
+  {
+    "provider_id": "PRV-006",
+    "provider_name": "Amaranth Specialty Pharmacy Network",
+    "specialty": "Specialty Rx",
+    "overall_breach_rate": 0.4885,
+    "n_requests": 131,
+    "n_breached": 64,
+    "confidence": "HIGH",
+    "confidence_rationale": "sample_size=131, cross-check agrees, evidence complete",
+    "root_cause": "provider_side_chronic",
+    "root_cause_detail": "Median weekly breach rate of 46% is persistently elevated across the quarter, not concentrated in any single incident week -- a provider-side pattern.",
+    "flagged_weeks": [],
+    "trend_slope": 0.021851317180987515,
+    "trend_r2": 0.14105771170809722,
+    "note": "Provider Amaranth Specialty Pharmacy Network (PRV-006) shows an elevated SLA breach rate of 48.9% across 131 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side chronic. Median weekly breach rate of 46% is persistently elevated across the quarter, not concentrated in any single incident week -- a provider-side pattern.",
+    "note_llm_verified": true
+  },
+  {
+    "provider_id": "PRV-007",
+    "provider_name": "Lakeside Cardiology Associates",
+    "specialty": "Cardiology",
+    "overall_breach_rate": 0.3388,
+    "n_requests": 121,
+    "n_breached": 41,
+    "confidence": "HIGH",
+    "confidence_rationale": "sample_size=121, cross-check agrees, evidence complete",
+    "root_cause": "provider_side_trend_improving",
+    "root_cause_detail": "Breach rate is improving over the quarter (OLS slope -0.053/week, R\u00b2=0.68) -- a provider-side pattern, not a one-week anomaly.",
+    "flagged_weeks": [],
+    "trend_slope": -0.05318491032776747,
+    "trend_r2": 0.6815897705033559,
+    "note": "Provider Lakeside Cardiology Associates (PRV-007) shows an elevated SLA breach rate of 33.9% across 121 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side trend improving. Breach rate is improving over the quarter (OLS slope -0.053/week, R\u00b2=0.68) -- a provider-side pattern, not a one-week anomaly.",
+    "note_llm_verified": true
+  },
+  {
+    "provider_id": "PRV-008",
+    "provider_name": "Sable Diagnostics & Labs",
+    "specialty": "Diagnostics",
+    "overall_breach_rate": 0.351,
+    "n_requests": 151,
+    "n_breached": 53,
+    "confidence": "HIGH",
+    "confidence_rationale": "sample_size=151, cross-check agrees, evidence complete",
+    "root_cause": "provider_side_trend_degrading",
+    "root_cause_detail": "Breach rate is degrading over the quarter (OLS slope +0.059/week, R\u00b2=0.84) -- a provider-side pattern, not a one-week anomaly. Note: week 6 also coincided with a queue-wide breach spike (43% among other providers on the same queue) -- a contributing factor, but the quarter-long trend is present independent of that week.",
+    "flagged_weeks": [
+      {
+        "week_idx": 6,
+        "provider_breach_rate": 0.538,
+        "other_providers_breach_rate": 0.429
+      }
+    ],
+    "trend_slope": 0.058918858918858924,
+    "trend_r2": 0.8402489838912123,
+    "note": "Provider Sable Diagnostics & Labs (PRV-008) shows an elevated SLA breach rate of 35.1% across 151 reviewed PA requests this quarter (confidence: HIGH). Root cause: provider side trend degrading. Breach rate is degrading over the quarter (OLS slope +0.059/week, R\u00b2=0.84) -- a provider-side pattern, not a one-week anomaly. Note: week 6 also coincided with a queue-wide breach spike (43% among other providers on the same queue) -- a contributing factor, but the quarter-long trend is present independent of that week.",
+    "note_llm_verified": true
+  }
+]

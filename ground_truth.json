@@ -1,0 +1,78 @@
+{
+  "seed": 42,
+  "quarter_start": "2026-01-05",
+  "n_weeks": 13,
+  "peak_week": 11,
+  "provider_archetypes": {
+    "PRV-001": "clean",
+    "PRV-002": "clean",
+    "PRV-003": "clean",
+    "PRV-004": "duplicate_submission",
+    "PRV-005": "coding_error",
+    "PRV-006": "chronic_sla_breach",
+    "PRV-007": "improving_trend",
+    "PRV-008": "degrading_trend"
+  },
+  "queue_incident": {
+    "queue_code": "Q3",
+    "week_index": 6,
+    "week_start": "2026-02-16",
+    "extra_days_added": 4,
+    "description": "Documented capacity backlog on the Specialty & DME Review Queue during week 6 added ~4 days to every determination routed through it that week, independent of provider behavior."
+  },
+  "duplicate_pairs": [
+    {
+      "original_pa_id": "PA-000401",
+      "duplicate_pa_id": "PA-000402",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000409",
+      "duplicate_pa_id": "PA-000410",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000423",
+      "duplicate_pa_id": "PA-000424",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000446",
+      "duplicate_pa_id": "PA-000447",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000470",
+      "duplicate_pa_id": "PA-000471",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000477",
+      "duplicate_pa_id": "PA-000478",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000505",
+      "duplicate_pa_id": "PA-000506",
+      "provider_id": "PRV-004"
+    },
+    {
+      "original_pa_id": "PA-000510",
+      "duplicate_pa_id": "PA-000511",
+      "provider_id": "PRV-004"
+    }
+  ],
+  "coding_error_pa_ids": [
+    "PA-000566",
+    "PA-000613",
+    "PA-000618",
+    "PA-000621",
+    "PA-000657"
+  ],
+  "injected_dirty_rows": [
+    "PA-999901 (bad provider FK)",
+    "PA-999902 (negative units)",
+    "PA-999903 (malformed date)"
+  ],
+  "note": "TEST FIXTURE ONLY. Never read by the agent or validation engine. 100% synthetic data; no real member, provider, or claims data was used."
+}
