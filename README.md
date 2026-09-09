@@ -4,11 +4,8 @@ An agentic data-operations pipeline for prior-authorization (PA) intake: determi
 
 Built against 100% synthetic data for a fictional health plan, **Amaranth Health Partners**. No real member, provider, or claims data is used anywhere -- member identifiers are tokenized by design (`MBR-########`), never a name, DOB, or SSN. This is one of three independent projects in a broader healthcare data-operations portfolio (the other two cover payment-integrity reconciliation and data-science handoff); each is a separate repo with its own data, schema, and code, deliberately not sharing a database.
 
-**🚀 Live dashboard:** [pa-intake-sla-agent.vercel.app](https://pa-intake-sla-agent.vercel.app) *(deployed on Vercel from `output/dashboard.html` -- charts rendered with a vendored, offline-safe copy of Chart.js, zero external calls. See [Deployment](#deployment) below. Replace this link with your own project's URL after deploying -- Vercel may append a suffix if the name is taken.)*
+**🚀 Live dashboard:** [pa-intake-sla-agent-2.vercel.app](https://pa-intake-sla-agent-2.vercel.app/) *(deployed on Vercel from `output/dashboard.html` -- charts rendered with a vendored, offline-safe copy of Chart.js, zero external calls. See [Deployment](#deployment) below. Replace this link with your own project's URL after deploying -- Vercel may append a suffix if the name is taken.)*
 
-![PA SLA Dashboard](docs/screenshots/dashboard.png)
-
----
 
 ## What this project demonstrates
 
